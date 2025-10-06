@@ -10,4 +10,10 @@ def calculate_bill(units):
 
 units = float(input("Enter units consumed: "))
 bill = calculate_bill(units)
+
+if bill > 1000:
+    discount = bill * 0.10
+    bill -= discount
+    print(f"Applied 10% discount: ₹{discount:.2f}")
+
 print(f"Total electricity bill: ₹{bill:.2f}")
